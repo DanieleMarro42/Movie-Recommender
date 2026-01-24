@@ -117,8 +117,8 @@ CineCluster/
 
 ## 👥 Credits & Acknowledgements
 
--   **Course**: Data Mining & Text Analytics, [University Name], 2026.
--   **Student**: [Your Name/Enrico Forneris]
+-   **Course**: Data Mining & Text Analytics, IULM University, 2025 - 2026.
+-   **Student**: Diego Casati, Enrico Forneris, Daniele Marro
 -   **Data Provider**: [TMDB Movies Dataset 2024 (Asaniczka)](https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies)
 
 ---
