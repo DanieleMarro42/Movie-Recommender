@@ -1,0 +1,375 @@
+:root {
+    /* Color Palette - IMDb Inspired */
+    --bg-color: #121212;
+    /* Deep Black/Grey */
+    --card-bg: #1F1F1F;
+    /* Lighter Black for Cards */
+    --text-primary: #FFFFFF;
+    --text-secondary: #B3B3B3;
+    --accent-color: #F5C518;
+    /* IMDb Yellow */
+    --accent-hover: #E2B616;
+
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    /* Cleaner for data */
+
+    --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.3);
+    --shadow-hard: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding-bottom: 50px;
+    line-height: 1.6;
+}
+
+/* Remove Background Blobs - Going for clean look */
+.background-blobs {
+    display: none;
+}
+
+/* --- Layout --- */
+.container {
+    max-width: 1200px;
+    /* Wider for more content */
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* --- Header --- */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    /* Yellow Logo */
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    background: none;
+    -webkit-text-fill-color: initial;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+/* --- Search Bar --- */
+.search-container {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    /* Critical for dropdown positioning */
+    z-index: 2000;
+    /* Ensure search is on top */
+}
+
+.search-bar-wrapper {
+    background: #FFFFFF;
+    border-radius: 4px;
+    /* Sharper corners */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    box-shadow: var(--shadow-soft);
+}
+
+.search-icon {
+    color: #333;
+    margin-left: 15px;
+    font-size: 1.2rem;
+}
+
+input[type="text"] {
+    flex: 1;
+    height: 100%;
+    border: none;
+    padding: 0 15px;
+    font-size: 1.1rem;
+    color: #121212;
+    background: transparent;
+    font-weight: 500;
+}
+
+input[type="text"]::placeholder {
+    color: #757575;
+}
+
+.search-btn {
+    height: 100%;
+    background: var(--accent-color);
+    color: #121212;
+    font-weight: 700;
+    padding: 0 2rem;
+    border-radius: 0 4px 4px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.search-btn:hover {
+    background: var(--accent-hover);
+    transform: none;
+    /* Remove scale animation */
+    filter: none;
+}
+
+/* --- Dropdown Fix --- */
+.search-results {
+    position: absolute;
+    top: 100%;
+    /* Directly below */
+    left: 0;
+    right: 0;
+    background: #1F1F1F;
+    border: 1px solid #444;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 400px;
+    overflow-y: auto;
+
+    /* VITAL BUGFIX */
+    z-index: 3000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.search-results.hidden {
+    display: none !important;
+}
+
+.search-result-item {
+    padding: 10px 15px;
+    /* Compact padding */
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background: #333;
+}
+
+.search-result-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-thumb {
+    width: 40px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 2px;
+}
+
+.search-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-title {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.result-badge {
+    background: transparent;
+    color: var(--accent-color) !important;
+    font-size: 0.7rem;
+    padding: 0;
+    margin-top: 2px;
+    border: none;
+    text-align: left;
+}
+
+/* --- Main Card --- */
+.glass-card {
+    /* Removing glassmorphism */
+    background: var(--card-bg);
+    border: 1px solid #333;
+    backdrop-filter: none;
+    border-radius: 4px;
+    padding: 2rem;
+    box-shadow: var(--shadow-hard);
+}
+
+.main-card {
+    border-left: 5px solid var(--accent-color);
+}
+
+.card-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.movie-info {
+    flex: 2;
+}
+
+.poster-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#moviePoster {
+    max-width: 200px;
+    border-radius: 4px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid #444;
+}
+
+#moviePoster.hidden {
+    display: none;
+}
+
+.main-card h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.badge {
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 4px 8px;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.cluster-info {
+    background: #333;
+    color: #FFF;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.overview-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+}
+
+/* --- Divider --- */
+.divider {
+    color: var(--accent-color);
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.divider span i {
+    margin-right: 10px;
+}
+
+.divider::after {
+    background: #333;
+    height: 2px;
+}
+
+/* --- Grid --- */
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    /* Narrower cards like posters */
+    gap: 2rem;
+}
+
+.rec-card {
+    background: var(--card-bg);
+    padding: 0;
+    /* Poster style requires full bleed image if we had one, but we use text */
+    border-radius: 4px;
+    border: 1px solid #333;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rec-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background: #2A2A2A;
+    border-color: #555;
+}
+
+.rec-poster {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+}
+
+.rec-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.rec-card>div {
+    display: contents;
+}
+
+.rec-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.rec-cluster {
+    color: #777;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.rec-overview {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* Show a bit more text */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: auto;
+    /* Push to bottom if space allows */
+}
+
+/* --- Footer --- */
+.footer {
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+}
