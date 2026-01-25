@@ -160,7 +160,7 @@ def get_recommendations(title, df, tfidf_matrix):
     # Get the movie indices
     movie_indices = [i[0] for i in sim_scores]
     
-    # Return the top 5 most similar movies
+    # Return the top 8 most similar movies
     return df.iloc[movie_indices]
 
 def initialize_system():
