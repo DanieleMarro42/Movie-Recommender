@@ -83,7 +83,6 @@ To improve accuracy, we don't just look at the plot. We create a "metadata soup"
 ```python
 soup = keywords + genres + overview
 ```
-This ensures that a movie like *Toy Story* matches other movies that are both "Animation" (Genre) and about "Toys" (Keyword/Plot).
 
 ### 2. TF-IDF Vectorization
 We use **Term Frequency-Inverse Document Frequency** to convert this "soup" into a matrix.
