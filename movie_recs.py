@@ -134,7 +134,7 @@ def build_model(df):
 # Goal: Measure similarity between movies to provide recommendations.
 def get_recommendations(title, df, tfidf_matrix):
     """
-    Returns top 5 similar movies based on Cosine Similarity.
+    Returns top 8 similar movies based on Cosine Similarity.
     """
     # Create a mapping of movie titles to indices
     # We strip and lower to ensure matches
