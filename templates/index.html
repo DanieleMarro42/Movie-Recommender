@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineCluster | AI Recommendations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="logo"><i class="fa-solid fa-film"></i> CineCluster</h1>
+            <p class="subtitle">AI-Powered Content-Based Recommendation Engine</p>
+            <div class="search-container">
+                <div class="search-bar-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="movieSearch" placeholder="Search for a movie (e.g., The Dark Knight)"
+                        autocomplete="off">
+                    <button id="searchBtn" class="search-btn">Analyze</button>
+                    <div id="searchResults" class="search-results hidden"></div>
+                </div>
+            </div>
+        </header>
+
+        <section id="resultSection" class="result-section hidden">
+            <div class="glass-card main-card">
+                <div class="card-content-wrapper">
+                    <div class="movie-info">
+                        <div class="card-header">
+                            <span class="badge">Input Movie</span>
+                            <h2 id="selectedTitle">Movie Title</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="cluster-info">
+                                <i class="fa-solid fa-layer-group"></i> <span id="selectedCluster">Cluster X</span>
+                            </div>
+                            <p id="selectedOverview" class="overview-text">Movie plot will appear here...</p>
+                        </div>
+                    </div>
+                    <div class="poster-container">
+                        <img id="moviePoster" src="" alt="Movie Poster" class="hidden"
+                            onerror="this.classList.add('hidden')">
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider">
+                <span><i class="fa-solid fa-wand-magic-sparkles"></i> Top 8 Semantic Matches</span>
+            </div>
+
+            <div class="recommendations-grid" id="recommendationsGrid">
+                <!-- Javascript will populate cards here -->
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Powered by TF-IDF Vectorization & K-Means Clustering</p>
+        </footer>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
