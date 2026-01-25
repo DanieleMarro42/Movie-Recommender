@@ -36,7 +36,7 @@ The core of the project demonstrates the **Knowledge Discovery in Databases (KDD
 
 | Component | Technology | Purpose |
 | :--- | :--- | :--- |
-| **Backend** | Python, Flask | Server logic and API endpoints. |
+| **Backend** | Flask | Server logic and API endpoints. |
 | **Data Processing** | Pandas, NumPy | Data manipulation and filtering. |
 | **Machine Learning** | Scikit-Learn | TF-IDF Vectorization, K-Means, Cosine Similarity. |
 | **NLP** | NLTK | Text tokenization and cleaning. |
