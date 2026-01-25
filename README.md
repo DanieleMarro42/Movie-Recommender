@@ -25,7 +25,7 @@ The core of the project demonstrates the **Knowledge Discovery in Databases (KDD
 ## ✨ Key Features
 
 -   **🔍 Intelligent Search**: Real-time typeahead search with poster thumbnails.
--   **🧠 AI-Powered Recommendations**: Analyzes the "DNA" of a movie (Plot + Genres + Keywords) to find its closest matches.
+-   **🧠 Powered Recommendations**: Analyzes the "DNA" of a movie (Plot + Genres + Keywords) to find its closest matches.
 -   **📊 Cluster Analysis**: Automatically groups movies into 8 distinct thematic clusters (e.g., "Family & Fantasy", "Horror & Thriller").
 -   **🖼️ Rich Visuals**: Fetches high-quality movie posters from TMDB for an immersive experience.
 -   **⚡ High Performance**: optimized to load and query 10,000 movies primarily in-memory using Pandas and Scikit-Learn.
