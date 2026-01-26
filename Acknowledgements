@@ -1,17 +1,38 @@
-Acknowledgments
+🏆 Acknowledgments
+We would like to express our gratitude to the following organizations and individuals who made this project possible:
 
-The authors of this project gratefully acknowledge Kaggle and The Movie Database (TMDB) for providing the TMDB Movie Metadata dataset, which served as the backbone for our Content-Based Recommendation System.
+Kaggle & The Movie Database (TMDB): For providing the TMDB Movie Metadata dataset, which served as the core foundation for our Content-Based Recommendation System.
 
-We also thank Dr. Alessandro Bruno and IULM University for the guidance provided during the "Data Mining & Text Analytics" course, which inspired the theoretical framework of this application.
+Dr. Alessandro Bruno & IULM University: For the invaluable guidance provided during the "Data Mining & Text Analytics" course, which inspired the theoretical framework of this application.
 
-Team Contributions:
-
-This project represents a fully collaborative effort by Daniele Marro, Enrico Forneris, and Diego Casati.
+👥 Team Contributions
+This project is the result of a fully collaborative effort by: Daniele Marro, Enrico Forneris, and Diego Casati.
 
 Adopting a proactive and joint development approach, all team members contributed equally to every phase of the project lifecycle:
 
-D. Marro, E. Forneris, and D. Casati jointly conducted the preliminary research on NLP techniques (TF-IDF), Cosine Similarity, and K-Means Clustering algorithms to define the project scope.
+🔬 Research & Analysis
+D. Marro, E. Forneris, and D. Casati jointly conducted preliminary research on:
 
-D. Marro, E. Forneris, and D. Casati collaborated on the Python implementation, working together on data cleaning, coding the recommendation logic, and debugging the script.
+NLP Techniques: TF-IDF (Term Frequency-Inverse Document Frequency).
 
-D. Marro, E. Forneris, and D. Casati collectively curated the project documentation, the README file, and the GitHub repository structure to ensure compliance with the submission guidelines.
+Algorithms: Cosine Similarity and K-Means Clustering.
+
+Project Scoping: Defining goals and technical requirements.
+
+💻 Development & Implementation
+D. Marro, E. Forneris, and D. Casati collaborated on the Python codebase, working side-by-side on:
+
+Data cleaning and preprocessing.
+
+Coding the recommendation logic and engine.
+
+Debugging and performance optimization.
+
+📖 Documentation & Deployment
+D. Marro, E. Forneris, and D. Casati collectively curated:
+
+Technical documentation and the README.md.
+
+GitHub repository structure and version control management.
+
+Compliance with academic submission guidelines.
